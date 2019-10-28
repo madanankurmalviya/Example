@@ -1,11 +1,13 @@
 import java.util.HashMap;
-public class HashMapDup
+import java.util.Map.Entry;
+public class HashMapDup1
 {
-	String str = "he is a man he is a boy he is a girl boy gir man man man man man";
-	String [] st =str.split(" ");
-	HashMap<String , Integer> hm = new HashMap<String,Integer>();
+	static String str = "she is a man he is a boy he is a girl boy gir man man man man man";
+	static String [] st =str.split(" ");
+	
 	public static void main (String [] args)
 	{
+HashMap<String , Integer> hm = new HashMap<String,Integer>();
 	    for(String s : st)
 	        {	
 		if(hm.get(s)!=null)
@@ -13,7 +15,7 @@ public class HashMapDup
 		        hm.put(s,s.length());
 		    }
 	        else
-	            {
+	            {	
 	                 hm.put(s,1);
 		    }	
 	        }
