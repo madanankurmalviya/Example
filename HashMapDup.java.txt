@@ -9,14 +9,22 @@ public class HashMapDup
 	    for(String s : st)
 	        {	
 		if(hm.get(s)!=null)
-		{
+		    {
 		        hm.put(s,s.length());
-		}
-	     else
-		{
-	                          hm.put(s,1);
-		}	
+		    }
+	        else
+	            {
+	                 hm.put(s,1);
+		    }	
 	        }
-                  	System.out.println(hm);
+	      System.out.println(hm);
+	      for(Entry<String,Integer> e : hm.entrySet())
+	      {
+	      	    if(e.getValue()>1)
+		       {
+		       	 System.out.println("The duplicates value is :"+e.getKey()+"\t"+e.getValue()+"times.");
+		       }
+		    
+	      }
 	}
 }
